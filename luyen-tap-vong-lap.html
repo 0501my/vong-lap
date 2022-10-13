@@ -29,24 +29,127 @@
 
 
 <!--Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.-->
-<script>
-let a0= +prompt("nhập số đầu");
-let a1= +prompt("nhập số thứ 2");
-for (let i = 0; i< 20 ; i++ ){
-    document.write(`  ${a0}`)
-    const g = a0
-    a0 = a1;
-    a1= g + a1;
-}if(i%5==0){
-    document.write(a0);
-}
-
-</script>
+<!--<script>-->
+<!--let a0= +prompt("nhập số đầu");-->
+<!--let a1= +prompt("nhập số thứ 2");-->
+<!--for (let i = 0; i< 20 ; i++ ){-->
+<!--    document.write(`  ${a0}`)-->
+<!--    const g = a0-->
+<!--    a0 = a1;-->
+<!--    a1 = g + a1;-->
+<!--}-->
+<!--</script>-->
 
 <!--Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.-->
 
+<!--    <script>-->
+<!--let a0= 0;-->
+<!--let a1= 1;-->
+<!--for (let i = 0; i< 20 ; i++ ){-->
+<!--    document.write(`  ${a0}`)-->
+<!--    const g = a0-->
+<!--    a0 = a1;-->
+<!--    a1 = g + a1-->
+<!--    if (i%5==0){-->
+<!--        console.log(g);-->
+<!--    }break;-->
+<!--}-->
+<!--</script>-->
+<!--Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci.-->
 <!--<script>-->
-<!--    -->
+<!--    let a0= 0;-->
+<!--    let a1= 1;-->
+<!--    tong = 0;-->
+<!--    for (let i = 0; i< 20 ; i++ ){-->
+<!--        document.write(`  ${a0}`)-->
+<!--        const g = a0-->
+<!--        a0 = a1;-->
+<!--        a1 = g + a1;-->
+<!--        tong+=g;-->
+<!--        document.write(tong);-->
+<!--    }-->
+<!--</script>-->
+
+<!--Bai 6 : Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên -->
+<!--  // let n = 0;-->
+<!--  // let tong = 0;-->
+<!--  // let a = '';-->
+<!--  // for (let i=1; ;i++) {-->
+<!--  //   if (i%7==0) {-->
+<!--  //     a += i+''-->
+<!--  //     console.log(a)-->
+<!--  //     tong +=i-->
+<!--  //     n++-->
+<!--  //     if (n==30) {-->
+<!--  //       break;-->
+<!--  //     }-->
+<!--  //   } document.write(a + '<br>');-->
+<!--  //   document.write('Tổng bằng: '+tong);-->
+<!--  //-->
+<!--  // }-->
+
+<!--Bai 7 : Hãy viết một chương trình in ra các số từ 1 đến 100. Nhưng nếu số chia hết cho 3 thì in ra "Fizz", 5 thì in ra "Buzz" thay vì in ra số đó. Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz"-->
+<!--<script>-->
+<!--    for (i = 1; i <= 100; i++) {-->
+<!--        if (i % 3 == 0 && i % 5 == 0) {-->
+<!--            document.write(i + "FizzBuzz  <br>")-->
+<!--        } else {-->
+<!--            if (i % 3 == 0) {-->
+<!--                document.write(i + "Fizz  <br>")-->
+<!--            }-->
+<!--            if (i % 5 == 0) {-->
+<!--                document.write(i + "Buzz  <br>")-->
+<!--            }-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+<button onClick= "a()">Bắt đầu</button>
+<script>
+
+function a() {
+debugger;
+let number = +prompt("Số bạn muốn đoán trong khoảng lớn nhất là bao nhiêu?")
+let number_ran = Math.floor(Math.random() * number);
+console.log(number_ran);
+let number_check = +prompt ("Nhập số bạn đoán");
+let count = 0;
+while (number_check !== number_ran) {
+count++;
+if (count == 4) {
+alert("Bạn hết số lần đoán")
+break;
+} else if (number_check < number_ran) {
+alert("Số bạn đoán bé hơn");
+} else {
+alert ("Số bạn đoán lớn hơn")
+}
+number_check = prompt ("Nhập số bạn đoán");
+}
+if (count == 4) {
+document.write("Bạn hết số lần đoán")
+} else {
+document.write("Bạn đã đoán đúng số. Chúc mừng bạn!")
+}
+}
+</script>
+
+
+<!--Bai 8: Game đoán số-->
+<!--<input id="Chơi" type="button" value="Chơi" onclick="start()">-->
+<!--<script>-->
+<!--    function start() {-->
+<!--        let n = +prompt('Giá trị muốn đoán trong khoảng')-->
+<!--        let a = +prompt("Giá trị số muốn đoán")-->
+<!--        let b = Math.floor(Math.random() * n);-->
+<!--        if (b === a) {-->
+<!--            alert("Bạn đã đoán đúng")-->
+<!--        } else {-->
+<!--            while (b !== a) {-->
+<!--                alert("Bạn đoán sai số đúng là: " + b)-->
+<!--                break;-->
+<!--            }-->
+<!--        }-->
+<!--    }-->
 <!--</script>-->
 </body>
 </html>
