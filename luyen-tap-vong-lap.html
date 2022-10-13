@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 1: Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành.-->
+<!--<script>-->
+<!--   for (a=1;a<100;a++){-->
+<!--      alert(a)-->
+<!--       if (a == 99) {-->
+<!--            alert("đã hoàn thành");-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+
+
+<!--Bài 2: Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập.-->
+<!--Nếu nhiệt độ nhập vào trên 100, yêu cầu người dùng giảm nhiệt độ. Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.-->
+<!--<script>-->
+<!--    let a = prompt("nhập nhiệt độ");-->
+<!--    for (;a>100;a&#45;&#45;){-->
+<!--        alert("giảm nhiệt độ");-->
+<!--    }if (a<20){-->
+<!--        alert("tăng nhiệt độ");-->
+<!--    }-->
+<!--</script>-->
+
+
+<!--Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.-->
+<script>
+let a0= +prompt("nhập số đầu");
+let a1= +prompt("nhập số thứ 2");
+for (let i = 0; i< 20 ; i++ ){
+    document.write(`  ${a0}`)
+    const g = a0
+    a0 = a1;
+    a1= g + a1;
+}if(i%5==0){
+    document.write(a0);
+}
+
+</script>
+
+<!--Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.-->
+
+<!--<script>-->
+<!--    -->
+<!--</script>-->
+</body>
+</html>
